@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hostel Management System Login Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  .mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; /* Ensure the images are positioned correctly */
+    top: 0;
+    left: 0;
+  }
+  .blue-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.732); /* Blue color with 50% opacity */
+    z-index: 1; /* Ensure the blue layer is below the slideshow */
+  }
+  .text-content {
+    position: absolute;
+    top: 60%; /* Adjusted position to create space between heading and text */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    z-index: 2; /* Ensure text appears above the blue overlay */
+    width: 70%;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .text-content h1 {
+    font-size: 70px;
+    position: absolute;
+    top: -50%; /* Adjusted position to place heading on top */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:rgb(255, 255, 255)
+  }
+  .text p {
+    top: -20%;
+    font-size: 200px;
+  }
+</style>
+</head>
+<body>
+<div class="w3-content w3-section" style="max-width:100%; height:100vh; z-index: 2;"> <!-- Adjusted z-index to ensure slideshow appears above the blue overlay -->
+  <img class="mySlides" src="alen-rojnic-T1Yvmf4oleQ-unsplash.jpg">
+  <img class="mySlides" src="b7c892e1-acf7-4559-8697-86ecf4522a6a.jpeg">
+  <img class="mySlides" src="home inspo hostel room ideas home decoration ideas hostel room decor hostel room makeover home desig.jpeg">
+  <img class="mySlides" src="moksha-jain-PoSPwUpv9IY-unsplash.jpg">
+  <img class="mySlides" src="nick-kimel-GrLnSHJT1fI-unsplash.jpg">
+</div>
+<div class="blue-overlay"></div> <!-- Blue layer -->
+<div class="text-content">
+  <h1>Welcome to Highrise Hostel!</h1>
+  <p>Your cozy haven in Gandhinagar. Our vibrant community offers comfortable accommodations and exciting activities, ensuring a memorable stay. From cozy dormitories to private rooms, enjoy modern amenities and a warm atmosphere. Join us for a unique travel experience filled with adventure and camaraderie.</p>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
