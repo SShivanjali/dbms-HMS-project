@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMS - Student Dashboard</title>
+  <link rel="stylesheet" href="student.css">
+  <script src="student.js" defer></script>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="student.html">Dashboard</a>
+  <a href="../leave/leave.html">Request a Leave</a>
+  <a href="../complaint/comp.html">File a complaint</a>
+  <a href="#">Notifications</a>
+  <a href="#">Logout</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+  <h2>What do you want to do today?</h2>
+  <div class="dashboard">
+    <div class="box" onclick="location.href='#'">
+      <img src="leave.png" alt="Request a Leave">
+      <h3>Request a Leave</h3>
+    </div>
+    <div class="box" onclick="location.href='#'">
+      <img src="complaint.png" alt="complaint">
+      <h3>File a Complaint</h3>
+    </div>
+    <div class="box" onclick="location.href='#'">
+      <img src="bell.png" alt="notificationBell">
+      <h3>Notifications</h3>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
