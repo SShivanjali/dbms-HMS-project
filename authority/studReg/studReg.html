@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMS - Student Registration</title>
+  <link rel="stylesheet" href="studReg.css">
+  <script src="studReg.js" defer></script>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../dashboard/authority.html">Dashboard</a>
+  <a href="#">Rooms</a>
+  <a href="#">Student Details</a>
+  <a href="studReg.html">Student Registration</a>
+  <a href="#">Logout</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+  <h2>Student Registration Form</h2>
+  <form class="container">
+    <div class="form-group">
+      <label for="university_id">University ID:</label>
+      <input type="text" id="university_id" name="university_id" placeholder="University ID" required />
+    </div>
+    <div class="form-group">
+      <label for="full_name">Full Name:</label>
+      <input type="text" id="full_name" name="full_name" placeholder="Full Name" required />
+    </div>
+    <div class="form-group">
+      <label for="mobile_no">Mobile No.:</label>
+      <input type="text" id="mobile_no" name="mobile_no" placeholder="Mobile No." required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" placeholder="Email" required />
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" placeholder="Address" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="guardian_name">Guardian Name:</label>
+      <input type="text" id="guardian_name" name="guardian_name" placeholder="Guardian Name" required />
+    </div>
+    <div class="form-group">
+      <label for="guardian_contact">Guardian Contact:</label>
+      <input type="text" id="guardian_contact" name="guardian_contact" placeholder="Guardian Contact" required />
+    </div>
+    <div class="form-group">
+      <label for="relation_with_guardian">Relation with Guardian:</label>
+      <input type="text" id="relation_with_guardian" name="relation_with_guardian" placeholder="Relation with Guardian" required />
+    </div>
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" placeholder="City" required />
+    </div>
+    <div class="form-group">
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" placeholder="State" required />
+    </div>
+    <div class="form-group">
+      <label for="fees_verified">Fees Payment Verified:</label>
+      <select id="fees_verified" name="fees_verified" required>
+        <option value="">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+    <button type="submit" class="registerbtn">Register</button>
+  </form>
+</div>
+
+</body>
+</html>
