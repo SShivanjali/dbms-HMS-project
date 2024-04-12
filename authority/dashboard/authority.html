@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMS - Authority Dashboard</title>
+  <link rel="stylesheet" href="authority.css">
+  <script src="authority.js" defer></script>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="authority.html">Dashboard</a>
+  <a href="#">Rooms</a>
+  <a href="#">Student Details</a>
+  <a href="../studReg/studReg.html">Student Registration</a>
+  <a href="#">Logout</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+  <h2>What do you want to do today?</h2>
+  <div class="dashboard">
+    <div class="box" onclick="location.href=''">
+      <img src="alloct.jpg" alt="Allocate Rooms">
+      <h3>Allocate Rooms</h3>
+    </div>
+    <div class="box" onclick="location.href='#'">
+      <img src="rooms.jpg" alt="Rooms">
+      <h3>Rooms</h3>
+    </div>
+    <div class="box" onclick="location.href='#'">
+      <img src="studDetails.jpg" alt="Student Details">
+      <h3>Student Details</h3>
+    </div>
+    <div class="box" onclick="location.href='#'">
+      <img src="studReg.jpg" alt="Student Registration">
+      <h3>Student Registration</h3>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
