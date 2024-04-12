@@ -1,0 +1,122 @@
+/* The sidebar menu */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  /* Style page content */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #67BAE3;
+  }
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .leave-form {
+    width: 50%;
+    margin: 20px auto;
+  }
+  
+  .leave-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .leave-form input[type="text"],
+  .leave-form textarea,
+  .leave-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .leave-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .leave-history {
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  .leave-history h2 {
+    margin-bottom: 10px;
+  }
+  
+  .leave-history table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .leave-history th, .leave-history td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .leave-history th {
+    background-color: #f2f2f2;
+  }
+  

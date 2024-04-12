@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMS - Apply for Leave</title>
+  <link rel="stylesheet" href="leave.css">
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../dashboard/student.html">Dashboard</a>
+        <a href="leave.html">Request a Leave</a>
+        <a href="../complaint/comp.html">File a complaint</a>
+        <a href="#">Notifications</a>
+        <a href="#">Logout</a>
+</div>
+
+<div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+</div>
+<div class="header">
+  <h1>Apply for Leave</h1>
+</div>
+
+<div class="leave-form">
+  <form id="leaveForm">
+    <label for="leaveType">Leave Type:</label>
+    <select id="leaveType" name="leaveType">
+      <option value="short">Short</option>
+      <option value="long">Long</option>
+    </select><br>
+
+    <label for="hostelID">Hostel ID:</label>
+    <input type="text" id="hostelID" name="hostelID"><br>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="outDateTime">Out Date & Time:</label>
+    <input type="datetime-local" id="outDateTime" name="outDateTime"><br>
+
+    <label for="inDateTime">In Date & Time:</label>
+    <input type="datetime-local" id="inDateTime" name="inDateTime"><br>
+
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" name="destination"><br>
+
+    <label for="reason">Reason:</label>
+    <textarea id="reason" name="reason"></textarea><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="leave-history">
+  <h2>Leave History</h2>
+  <table id="leaveHistory">
+    <thead>
+      <tr>
+        <th>Leave Type</th>
+        <th>Hostel ID</th>
+        <th>Name</th>
+        <th>Out Date & Time</th>
+        <th>In Date & Time</th>
+        <th>Destination</th>
+        <th>Reason</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Leave history entries will be dynamically added here -->
+    </tbody>
+  </table>
+</div>
+
+<script src="leave.js"></script>
+</body>
+</html>
