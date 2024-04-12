@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMS - File a Complaint</title>
+  <link rel="stylesheet" href="comp.css">
+</head>
+
+<body>
+
+<div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../dashboard/student.html">Dashboard</a>
+        <a href="../leave/leave.html">Request a Leave</a>
+        <a href="comp.html">File a complaint</a>
+        <a href="#">Notifications</a>
+        <a href="#">Logout</a>
+</div>
+
+<div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+</div>
+
+<div class="header">
+  <h1>File a Complaint</h1>
+</div>
+
+<div class="complaint-form">
+  <form id="complaintForm">
+    <label for="complaintType">Complaint Type:</label>
+    <select id="complaintType" name="complaintType">
+      <option value="it">IT Department</option>
+      <option value="carpenter">Carpenter</option>
+      <option value="electrician">Electrician</option>
+      <option value="plumber">Plumber</option>
+      <option value="other">Other</option>
+    </select><br>
+
+    <label for="hostelID">Hostel ID:</label>
+    <input type="text" id="hostelID" name="hostelID"><br>
+
+    <label for="issueDescription">Issue Description:</label>
+    <textarea id="issueDescription" name="issueDescription"></textarea><br>
+
+    <label for="issueDate">Issue Date:</label>
+    <input type="date" id="issueDate" name="issueDate" value=""><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="complaint-history">
+  <h2>Complaint History</h2>
+  <table id="complaintHistory">
+    <thead>
+      <tr>
+        <th>Complaint ID</th>
+        <th>Complaint Type</th>
+        <th>Hostel ID</th>
+        <th>Issue Description</th>
+        <th>Issue Date</th>
+        <th>Resolved Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Complaint history entries will be dynamically added here -->
+    </tbody>
+  </table>
+</div>
+
+<script src="comp.js"></script>
+</body>
+</html>

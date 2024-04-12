@@ -1,0 +1,120 @@
+/* The sidebar menu */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+/* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Style page content */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #67BAE3;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.complaint-form {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.complaint-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.complaint-form input[type="text"],
+.complaint-form textarea,
+.complaint-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.complaint-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.complaint-history {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.complaint-history h2 {
+    margin-bottom: 10px;
+}
+
+.complaint-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.complaint-history th, .complaint-history td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.complaint-history th {
+    background-color: #f2f2f2;
+}
