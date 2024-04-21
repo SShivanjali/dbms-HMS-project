@@ -11,7 +11,7 @@
       overflow: hidden;
     }
     h1 {
-      color: #0861e7; /* Change color to red (#ff0000) or any other color code */
+      color: #1e00ff; /* Change color to red (#ff0000) or any other color code */
       font-size: 50px; 
       margin-left: 20px;
       margin-bottom: 30px;
@@ -89,6 +89,7 @@
     }
     .welcome-text p {
       font-size: 30px;
+      text-align: justify;
     }
 
     .title {
@@ -152,6 +153,37 @@
 
     .form-group a:hover {
       color: #333;
+    }
+
+    /* Footer styles */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #574bb2;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      z-index: 1000; /* Ensure the footer is above other content */
+      margin-top: -100px;
+      
+    }
+
+    footer button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: -200px;
+      align-items: center;
+    }
+
+    footer button:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
@@ -218,6 +250,13 @@
       </div>
     </div>
   </div>
+  <footer>
+    <div class="feedback-form">
+      <form id="feedbackForm">
+        <button type="submit">Your Feedback</button>
+      </form>
+    </div>
+  </footer>
   <script>
     document.getElementById("signupForm").addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent the default form submission
