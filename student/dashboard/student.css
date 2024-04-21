@@ -91,8 +91,9 @@ border-radius: 10px; /* Adding border radius for rounded corners */
   transform: translate(-50%, -50%); /* Center the text precisely */
   margin: 0;
   padding: 0;
-  color: black;
+  color: rgb(253, 253, 253);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+  font-size: 30px;
 }
 body {
 background-color: #67BAE3;
