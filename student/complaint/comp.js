@@ -1,60 +1,83 @@
-// Function to generate a unique complaint ID
-function generateComplaintID() {
-    // Get the current date and time
-    var currentDate = new Date();
-    
-    // Extract year, month, day, hours, minutes, and seconds
-    var year = currentDate.getFullYear();
-    var month = currentDate.getMonth() + 1; // Months are zero-indexed
-    var day = currentDate.getDate();
-    var hours = currentDate.getHours();
-    var minutes = currentDate.getMinutes();
-    var seconds = currentDate.getSeconds();
-  
-    // Format the components into a unique ID string
-    var complaintID = 'C' + year + pad(month) + pad(day) + pad(hours) + pad(minutes) + pad(seconds);
-  
-    return complaintID;
-  }
-  
-  // Helper function to pad single-digit numbers with leading zeros
-  function pad(num) {
-    return num < 10 ? '0' + num : num;
-  }
-  
   // Function to handle form submission
-  function submitComplaint(event) {
-    event.preventDefault();
+async function submitComplaint(event) {
+  event.preventDefault();
+
+  // Get form data
+  var complaintType = document.getElementById('complaintType').value;
+  var hostelID = document.getElementById('hostelID').value;
+  var issueDescription = document.getElementById('issueDescription').value;
+  var issueDate = document.getElementById('issueDate').value;
+  // console.log(typeof hostelID); // Check the type of hostelID
+
+// Validate hostelID as an integer
+// if (!Number.isInteger(Number(hostelID))) {
+//   alert("Hostel ID must be a valid integer.");
+//   return; // Stop further execution
+// }
+  // Create a data object to send to the backend
+  const complaintData = {
+    compType: complaintType,
+    hos_id: hostelID,
+    issue: issueDescription,
+    issue_date: issueDate
+  };
+
+  console.log(complaintData);
+  // // Send data to the backend
+  // fetch('http://localhost:3000/posts', {
+  //   method: 'POST',
+  //   mode:  'no-cors',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(complaintData)
+  // })
+  // // .then(response => response.json())
+  // .then(data => {
+  //   console.log(data); // Log response from the backend
+  //   // Optionally, show a success message or update UI
+  // })
+  // .catch(error => {
+  //   console.error('Error:', error);
+  //   // Optionally, show an error message to the user
+  // });
+
+  try {
+    const response = await fetch('http://localhost:3000/posts/complaint', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(complaintData)
+    });
   
-    // Get form data
-    var complaintType = document.getElementById('complaintType').value;
-    var hostelID = document.getElementById('hostelID').value;
-    var issueDescription = document.getElementById('issueDescription').value;
-    var issueDate = document.getElementById('issueDate').value;
+    console.log(response); // Log response from the backend
   
-    // Generate a unique complaint ID
-    var complaintID = generateComplaintID();
-  
-    // Create a new table row
-    var newRow = document.createElement('tr');
-    newRow.innerHTML = `
-      <td>${complaintID}</td>
-      <td>${complaintType}</td>
-      <td>${hostelID}</td>
-      <td>${issueDescription}</td>
-      <td>${issueDate}</td>
-      <td>-</td>
-      <td>Pending</td>
-    `;
-  
-    // Append the new row to the table body
-    var complaintHistoryTable = document.getElementById('complaintHistory').getElementsByTagName('tbody')[0];
-    complaintHistoryTable.appendChild(newRow);
-  
-    // Clear form fields
-    document.getElementById('complaintForm').reset();
+  } catch (error) {
+    console.error('Error:', error);
   }
-  
+
+  // Create a new table row
+  var newRow = document.createElement('tr');
+  newRow.innerHTML = `
+    <td>${complaintType}</td>
+    <td>${hostelID}</td>
+    <td>${issueDescription}</td>
+    <td>${issueDate}</td>
+    <td>-</td>
+    <td>Pending</td>
+  `;
+
+  // Append the new row to the table body
+  var complaintHistoryTable = document.getElementById('complaintHistory').getElementsByTagName('tbody')[0];
+  complaintHistoryTable.appendChild(newRow);
+
+  // Clear form fields except for issueDate
+  document.getElementById('complaintType').value = '';
+  document.getElementById('hostelID').value = '';
+  document.getElementById('issueDescription').value = '';
+}
   // Add event listener for form submission
   document.getElementById('complaintForm').addEventListener('submit', submitComplaint);
 
@@ -67,3 +90,12 @@ function generateComplaintID() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
   }
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Set the value of the issueDate input to the current date
+  const issueDateInput = document.querySelector('#issueDate');
+  const currentDate = new Date();
+  issueDateInput.value = currentDate.toISOString().split('T')[0];
+
+  console.log('Issue date set to:', issueDateInput.value); // Log the issue date value
+});
