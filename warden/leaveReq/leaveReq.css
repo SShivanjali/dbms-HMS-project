@@ -1,0 +1,106 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Sidebar styling */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Main content styling */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+.leave-requests {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.leave-requests h2 {
+    margin-bottom: 10px;
+}
+
+/* Table styling */
+#leaveRequests {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+#leaveRequests th, #leaveRequests td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#leaveRequests th {
+    background-color: #f2f2f2;
+}
+
+#leaveRequests td button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#leaveRequests td button:hover {
+    background-color: #45a049;
+}
+

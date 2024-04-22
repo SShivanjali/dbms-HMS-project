@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMS - Leave Requests</title>
+  <link rel="stylesheet" href="leaveReq.css">
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="../dashboard/home.html">Dashboard</a>
+    <a href="leaveReq.html">Leave Requests</a>
+    <a href="#">Complaints</a>
+    <a href="#">Post a Notification</a>
+    <a href="#">Logout</a>
+</div>
+
+<div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+</div>
+
+<div class="leave-requests">
+  <h2>Leave Requests</h2>
+  <table id="leaveRequests">
+    <thead>
+      <tr>
+        <th>Leave Type</th>
+        <th>Hostel ID</th>
+        <th>Name</th>
+        <th>Out Date & Time</th>
+        <th>In Date & Time</th>
+        <th>Destination</th>
+        <th>Reason</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Leave request entries will be dynamically added here -->
+    </tbody>
+  </table>
+</div>
+
+<script src="leaveReq.js"></script>
+</body>
+</html>
