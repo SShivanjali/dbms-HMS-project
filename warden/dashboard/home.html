@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMS - Warden Dashboard</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
+  <style>
+    .box {
+      position: relative;
+      overflow: hidden;
+    }
+    .box img {
+      width: 100%;
+      height: 100%; /* Ensure the image fills the entire box */
+      object-fit: contain; /* Cover the entire box without distortion */
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
+      opacity: 0; /* Initially, the overlay is transparent */
+      transition: opacity 0.3s ease; /* Add transition for smooth effect */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column; /* Stack the content vertically */
+    }
+    .box:hover .overlay {
+      opacity: 1; /* On hover, make the overlay fully visible */
+    }
+    .overlay h3 {
+      color: white;
+      margin: 0;
+      font-size: 30px; /* Adjust the font size as needed */
+    }
+  </style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html">Dashboard</a>
+  <a href="../leaveReq/leaveReq.html">Leave Requests</a>
+  <a href="#">Complaints</a>
+  <a href="#">Post a Notification</a>
+  <a href="#">Logout</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+  <h2>What do you want to do today?</h2>
+  <!-- <div id="user-info">
+    <img src="student_photo.jpg" alt="Student Photo">
+    <h3>Hi, User</h3>
+  </div> -->
+  <div class="dashboard">
+    <div class="box" onclick="location.href='../leaveReq/leaveReq.html'">
+      <img src="leaveReq.png" alt="Leave Requests">
+      <div class="overlay">
+        <h3>Leave Requests</h3>
+      </div>
+    </div>
+    <div class="box" onclick="location.href='#'">
+      <img src="complaints.png" alt="Complaints">
+      <div class="overlay">
+        <h3>Complaints</h3>
+      </div>
+    </div>
+    <!-- <div class="box" onclick="location.href='#'">
+      <img src="studDetails.jpg" alt="Student Details">
+      <div class="overlay">
+        <h3>Student Details</h3>
+      </div>
+    </div>
+    <div class="box" onclick="location.href='../studReg/studReg.html'">
+      <img src="studReg.jpg" alt="Student Registration">
+      <div class="overlay">
+        <h3>Student Registration</h3>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+</body>
+</html>
